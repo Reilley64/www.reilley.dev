@@ -133,7 +133,7 @@ main {
   cursor: pointer;
   font-size: 20px;
   height: 47px;
-  transition: background-color 15ms linear;
+  transition: background-color 15ms linear, border-color 15ms linear;
   width: 47px;
 }
 
