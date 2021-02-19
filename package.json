@@ -6,7 +6,6 @@
   "author": "",
   "scripts": {
     "build": "parcel build index.html",
-    "deploy": "aws s3 sync dist/ s3://www.reilley.dev",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
