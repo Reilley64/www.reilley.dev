@@ -144,13 +144,18 @@ main {
 }
 
 #languages {
-  animation: blink-caret .75s step-end infinite;
+  animation: blink-caret 0.75s step-end infinite;
   border-right: 4px solid var(--primary);
   padding-right: 4px;
   width: auto;
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--primary); }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary);
+  }
 }
