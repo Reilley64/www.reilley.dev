@@ -28,7 +28,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.5px;
-  //text-align: center;
 }
 
 .button {
@@ -159,14 +158,18 @@ main {
 
   &:hover {
     color: rgba(var(--primary-color), 0.87);
-    transform: translateY(-3px);
+    transform: translateY(-4px);
   }
+}
+
+.function {
+  color: rgba(var(--primary-color));
 }
 
 #languages {
   animation: blink-caret 0.75s step-end infinite;
   border-right: 4px solid rgba(var(--primary-color), 0.87);
-  height: 20px;
+  height: 1.25em;
   padding-right: 4px;
   text-transform: uppercase;
 }
@@ -194,10 +197,6 @@ main {
       margin: 0 8px;
     }
   }
-}
-
-.function {
-  color: rgba(var(--primary-color));
 }
 
 @keyframes blink-caret {
