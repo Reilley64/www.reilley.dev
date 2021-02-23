@@ -14,10 +14,11 @@
     "@fontsource/roboto": "^4.2.1",
     "@fontsource/roboto-mono": "^4.2.1",
     "@fortawesome/fontawesome-free": "^5.15.2",
-    "sanitize.css": "^12.0.1"
+    "parcel-bundler": "^1.12.4",
+    "sanitize.css": "^12.0.1",
+    "sass": "^1.32.8"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
     "prettier": "^2.2.1"
   },
   "prettier": {
