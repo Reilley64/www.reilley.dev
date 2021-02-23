@@ -6,6 +6,7 @@
 
 :root {
   --primary: rgb(92, 107, 192);
+  --font-color: rgba(0, 0, 0, 0.87);
 }
 
 a {
@@ -14,18 +15,12 @@ a {
 
 body {
   background-color: rgb(250, 250, 250);
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--font-color);
   font-family: Roboto, serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.5px;
   text-align: center;
-}
-
-@media (max-width: 800px) {
-  body {
-    font-size: 12px;
-  }
 }
 
 .button {
@@ -121,26 +116,55 @@ footer {
 main {
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
 }
 
+.main-left {
+  display: flex;
+  justify-content: center;
+  width: 64px;
+}
+
+.social {
+  bottom: 0;
+  left: 40px;
+  position: fixed;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-list:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 8px auto 0;
+  background-color: var(--font-color);
+}
+
+.social-list > li {
+  margin: 8px 0;
+}
+
 .social-icon {
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 100%;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  font-size: 20px;
-  height: 47px;
-  transition: background-color 15ms linear, border-color 15ms linear, color 15ms linear;
-  width: 47px;
+  display: inline-block;
+  color: var(--font-color);
+  font-size: 24px;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon:hover {
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(255, 255, 255);
   color: var(--primary);
+  transform: translateY(-3px);
 }
 
 #languages {
@@ -149,6 +173,32 @@ main {
   padding-right: 4px;
   width: auto;
 }
+
+@media (max-width: 800px) {
+  body {
+    font-size: 12px;
+  }
+
+  .social {
+    align-items: center;
+    height: 48px;
+    left: auto;
+  }
+
+  .social-list {
+    flex-direction: row;
+  }
+
+  .social-list:after {
+    height: 0;
+    width: 0;
+  }
+
+  .social-list > li {
+    margin: 0 8px;
+  }
+}
+
 
 @keyframes blink-caret {
   from,
