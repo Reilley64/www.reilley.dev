@@ -28,7 +28,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.5px;
-  text-align: center;
+  //text-align: center;
 }
 
 .button {
@@ -70,7 +70,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-transform: uppercase;
+  margin: 16px 0;
 }
 
 h1,
@@ -166,7 +166,6 @@ main {
 #languages {
   animation: blink-caret 0.75s step-end infinite;
   border-right: 4px solid rgba(var(--primary-color), 0.87);
-  color: rgba(var(--primary-color), 0.87);
   height: 20px;
   padding-right: 4px;
   text-transform: uppercase;
@@ -197,12 +196,16 @@ main {
   }
 }
 
+.function {
+  color: rgba(var(--primary-color));
+}
+
 @keyframes blink-caret {
   from,
   to {
     border-color: transparent;
   }
   50% {
-    border-color: rgb(var(--primary-color), 0.87);
+    border-color: rgb(var(--font-color), 0.87);
   }
 }
