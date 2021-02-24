@@ -119,7 +119,25 @@ main {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: center;
+
+  & > .container {
+    max-height: 100vh;
+    max-width: 800px;
+    overflow-y: auto;
+    padding: calc(32px + 15vh) 32px 32px;
+    scrollbar-width: none;
+    width: 100%;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 32px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .social {
@@ -174,15 +192,44 @@ main {
   text-transform: uppercase;
 }
 
+.work-experience {
+  & > h6 > small {
+    color: rgba(var(--font-color), 0.54);
+  }
+}
+
+.get-in-touch {
+  align-items: center;
+  display: flex;
+  height: 104px;
+  float: right;
+}
+
 @media (max-width: 800px) {
   body {
     font-size: 12px;
   }
 
+  main > .container {
+    max-height: initial;
+    overflow-y: initial;
+    padding-bottom: 16px;
+    padding-top: 32px;
+
+    &:after {
+      height: 0;
+    }
+  }
+
   .social {
     align-items: center;
-    height: 48px;
-    left: auto;
+    bottom: initial;
+    display: flex;
+    justify-content: center;
+    left: initial;
+    padding: 16px;
+    position: relative;
+    width: 100%;
   }
 
   .social-list {
@@ -196,6 +243,10 @@ main {
     & > li {
       margin: 0 8px;
     }
+  }
+
+  .get-in-touch {
+    display: none;
   }
 }
 
